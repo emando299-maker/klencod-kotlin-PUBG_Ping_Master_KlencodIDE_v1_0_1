@@ -1,0 +1,28 @@
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+}
+
+android {
+    namespace = "com.pingmaster.pubg"
+    compileSdk = 34
+    buildToolsVersion = "34.0.0"
+
+    defaultConfig {
+        applicationId = "com.pingmaster.pubg"
+        minSdk = 23
+        targetSdk = 34
+        versionCode = 2
+        versionName = "1.0.1"
+    }
+
+    // Keep Java and Kotlin bytecode targets aligned.
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
